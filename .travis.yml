@@ -3,5 +3,6 @@ deploy:
   skip-cleanup: true
   github-token: b2b2434575f6f2d75efddd7ea92bec4e569175ed
   keep-history: false
+  local-dir: book
   on:
     branch: master
