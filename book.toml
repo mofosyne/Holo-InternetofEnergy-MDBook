@@ -1,0 +1,5 @@
+[book]
+authors = ["Simon Wilson", "Mike Gamble"]
+multilingual = false
+src = "src"
+title = "Internet of Energy Book"
