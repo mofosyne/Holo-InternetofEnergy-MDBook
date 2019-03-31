@@ -1,0 +1,8 @@
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: b2b2434575f6f2d75efddd7ea92bec4e569175ed
+  local-dir: ./book
+  keep-history: false
+  on:
+    branch: master
