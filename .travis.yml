@@ -1,0 +1,25 @@
+language: rust
+sudo: false
+
+cache:
+  - cargo
+
+rust:
+  - stable
+
+before_script:
+  - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
+  - (test -x $HOME/.cargo/bin/mdbook || cargo install --vers "^0.1" mdbook)
+  - cargo install-update -a
+
+script:
+  - cd path/to/mybook && mdbook build && mdbook test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: b2b2434575f6f2d75efddd7ea92bec4e569175ed
+  local-dir: path/to/mybook/book
+  keep-history: false
+  on:
+    branch: master
