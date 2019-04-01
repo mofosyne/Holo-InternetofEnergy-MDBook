@@ -1,15 +1,16 @@
 # Grammar and Currency
 
-## objective
-
-this sets the rules for interactions, between devices, between users, between communities, and any combination of the above.
-for m2m communications on the IoE one big challenge will be trust of the interactions... we need to create a framework that ensures as much as possible that what one agent is telling another is true, and if it is found not to be what are the consequences.
-
-beyond that this section also sets up a 'currency' standard for value transactions that aims to create a flow to create the following:
-- a currency that enables energy to be traded p2p m2m across device, product, brand, providers, and geographies.
-- a model that rewards local clean community based energy givers and efficient users
-- a model that rewards those who give clean energy in a way that helps 'prop' up, support and enhance the ability for those who want to transform to clean energy but lack the resources.
-- a model that discourages dirty energy sources
+## User stories
+- as a device I need a mutual credit currency that enables me to trade value with others in the system
+- I need that currency to work across device, brand, architectural, and geographical boundaries and is not dependent on retailer or provider.
+- as a device that generates energy I need to be able to issue the currency into existence.
+- as a device that generates energy I need to be rewarded if the energy I generate is clean.
+- as a device that consumes energy I need to see whether the energy I procure is clean or dirty.
+- as a device that consumes energy I should be rewarded if the energy I procure is clean.
+- as a device that stores energy I should be rewarded for storing and releasing energy that benefits the entire network.
+- as a device I need a model that ensures security and privacy of my energy transactions.
+- as an app developer/provider I need to be rewarded in a currency for the value I provide.
+- as a device that generates energy I need to be able to 'cash out' or 'cash in'.
 
 ## currency design Architecture
 

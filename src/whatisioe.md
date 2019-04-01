@@ -1,65 +1,79 @@
 # Welcome to the Internet of Energy
 ## Introduction
-Welcome to the Internet of Energy (IoE) Book.  This book aims to give you an understanding of what the IoE is, how it works, what it comprises of, and the tools and knowledge to begin building solutions on it.
+Welcome to the Internet of Energy (IoE) Book.  This book aims to give you an understanding of what the IoE is, how it works, what it comprises of, and where you can apply it to your business or device.
+It also gives you the tools and knowledge to begin designing, integrating, and building solutions on it.
 
-## Energy transformation
-The energy system in every country in the world is undergoing massive transformation.  The grids we rely on and the power that flows through them has historically and typically flowed one way with you and I as consumers of energy fed by large centralized power generation plants.
+## A quick note about Energy transformation
+Energy systems in every country in the world are undergoing massive transformation.
+The grids we rely on and the power that flows through them historically and typically has flowed one way with you and I as consumers of energy, being fed by large centralized power generation plants.
 This architecture however is under attack.
-Rooftop solar, home battery storage, and smart 'IoT' energy consumption devices are flooding onto the system.
-These services are democratising the energy system and provide the ability for devices to connect, co-ordinate, orchestrate, and transact energy value, behaviour and sometimes the energy electrons directly.
-Our grid providers are struggling to keep up but the writing is on the wall that our energy grids will over the next years to come move from top-down feeder systems, to full-mesh networks.
+Rooftop solar systems, home battery storage, Electric Vehicles, and Intelligent 'IoT' devices are flooding onto the system.
+These services are democratising the grid and with IoT becoming pervasive we now have the ability to create an eco-system where any energy consuming, storing, monitoring, or generating device or system can connect, co-ordinate, orchestrate, and/or transact energy value.
+It is still early days in this transformation and our grid providers are struggling to keep up, but it is happening rapidly and the industry as a whole is trying to 'upgrade the airplane mid flight' from a top-down, one way energy feeder systems, into a full-mesh networks.
 
 ## The Internet of Energy
-The internet of energy is about preparing for that outcome and leverage the new intelligence at the edge of these systems.
-It provides the common and open protocol and language needed to enable our energy system and the devices that use it to hyper-scale (like the internet we know).
+The internet of energy is using technology is about preparing for that outcome by leveraging device intelligence at the top, middle and extreme edges of the energy system.
 
-It is analogous to the TCP/IP protocol of the information internet in that it is:
-- Open source and free to use for anyone.
-- Provides a common 'language' that works across energy device types, brands, manufacturers, businesses, and geographies.
-- Is scalable, lightweight and modular
+It is the common and open protocol and language that enables energy consuming, generating, storing, or monitoring devices to securely, privately, and with scalability communicate, disseminate and share value.
 
-TCP/IP has changed the way we communicate and consume information around the world and has turned the globe into one collaborative community.
-The IoE will do the same thing for Energy.
+We wish for the IoE to become a standard analogous to what TCP/IP protocol has become for the information internet in that it is a de-facto standard that is used across devices, brands, architectures, states, countries..
 
-## How is it used?
-The IoE protocol is software that embeds into any 'Energy Device'.
-That device may be a solar panel, battery, air-conditioner, building-management-system, fridge, fan, plug, meter, power substation, wind farm or more.  It can be anything that is consuming, producing, storing, or monitoring power.
-Once embedded that device now has a global identity and the knowledge of a common language through which it can discover, communicate and form relationships and/or trade value with others in the system.
+For that reason the IoE is built upon some of the same principles as TCP/IP in that it is:
+- Open source and free to use for anyone to adopt and use (not proprietary and closed).
+- It is simple and elegant and provides a common 'language' that works across any device type, brand, manufacturer, businesses, and geography.
+- Is scalable, lightweight, modular, and community driven.
 
-## Smart Energy Apps
-But a common language is not enough.  It is how we use that language that is important.
-As with the Internet of information it is the Applications that give it value.  So to for the IoE.  In the IoE we call these Smart Energy Apps.
+The TCP/IP standard has changed the way we communicate and consume information around the world and has transformed the world into one global collaborative community.
+It has opened new products, models and partnerships for businesses, individuals and communities alike that where previously unimaginable.
 
-A Smart Energy App is an application that any 'agent' in the IoE can run to orchestrate, co-ordinate, trade value, or adjust energy usage.
+We hope with your help that the IoE will do the same thing for Energy.
 
-Some examples that RedGrid have created are:
+## How exactly can I use it?
+The IoE protocol is a set of software modules that can be embedded into any 'Energy Device'.
+That device may be a solar panel, a battery, an air-conditioner, a building-management-system, fridge, fan, smart plug, smart meter, substation infrastructure, wind farm or more.
+It is relevant for anything in the energy system that is consumes, produces, stores, or monitors power.
+
+When embedded to your device it is given a secure, and private global identity for communications.
+It is also given a common language and currency that it can use to; discover, communicate and form relationships and/or trade value with others in the system (regardless of their brand, type, and even location).
+
+## What is possible when everyone speaks a common language?
+A common language for communications alone is not enough.  What provides value for all of us is how we use that language and what we use it for.
+In the Internet of information this value is provided through Applications.  The same is true for the IoE and in the IoE we call these Smart Energy Apps.
+
+Smart Energy Apps are applications that any 'agent' in the IoE can run that allow that device to orchestrate, co-ordinate, trade value, or adjust energy usage.
+
+Anyone can use the IoE software to develop 'Smart Energy Apps' that are relevant to their needs but here are some examples that RedGrid have created to give you a feel for what is possible:
 
 - **Demand Response App**
-this app enables an a single or group of air conditioners to react and respond to energy market conditions.
-this app uses Holochain DHTs to provide a signal to devices about market conditions that these devices use to shift or move their energy usage.  As an example if there is a spike in the wholesale market price of energy (or some other market signal a user may wish to incorporate) the device is aware and will act accordingly (switch or move power for some or all of the spike period).
+this app enables an a single or group of air conditioners to react and respond as a group to energy market conditions.
+this app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
+This saves money, improves device life and benefits grid stability as devices reduce their usage (in concert) when demands on the system are too high.
 
 - **Local Intelligent agent**
-this app allows energy managers to obtain a 'personality' for the buildings and energy assets they manage.  It incorporates some 'Private/Distributed' Machine Learning (ML) capability to model a space and energy agent 'persona' based on data shared through the IoE.
-an example of how this works is for an air conditioner in a room.  Through the IoE Protocol and the Local Intelligent Agent Application the air conditioner data provides relevant information to understand; the usage routine of the device, the set points in the device, the rate at which the space heats or cools, the conditions of that location etc.  It also uses make/model information in combination with the data above to provide energy managers asset life information and more.
+this app allows energy managers to build a 'personality' for the energy assets and spaces they manage.
+Using 'Private/Distributed' Machine Learning (ML) capability it uses data from energy devices (like air-conditioners) to model a space.
+An example of how this works is for an air conditioner in a room.  Through the IoE Protocol and the Local Intelligent Agent Application the air conditioner data feeds temperature, humidity, on/off information, make/model, location, timing information (..more) into a Machine Learning model that enables system managers to get a view of; the usage routine of the device, the set points relevant for the device, the rate at which the space heats or cools, the conditions of that location, estimates around asset life, how that space performs compared to other similar spaces and more.
 
 - **Community and Macro Intelligence**
-this app builds upon the Local Intelligent Agent app above allowing 'agents' to share their own data into a private homomorphically encrypted global ML model that will learn and share global level macro energy trend data for communities, regions, states, countries and even the globe.
-Agents and communities can benefit from the macro insights without individual participants disclosing or risking their privacy.
+this app builds upon the Local Intelligent Agent app above allowing 'agents' to share their own data into a private homomorphically encrypted global ML model that will learn and share global level macro energy trend data.
+This creates a global energy view of trends and changes that is relevant for energy  communities, regions, states, countries, regulators, operators, businesses and individuals.
+It provides a global macro view of insights without individual participants disclosing or risking their privacy.
 
 - **Community Orchestration**
-this app is for energy managers who look after multiple distributed energy assets in a portfolio.  It provides a front end application but is primarily aimed to be automatic and adapting.
-this app allows devices running the IoE to orchestrate and react in co-ordination in order to reduce costs and be more efficient.
-It optimised energy use within the energy managers system between all devices and through the front end application it provides insight and awareness at the extreme edges of the network.
+this app is for energy managers who look after multiple distributed energy assets in a portfolio.  It provides a front end application but is primarily aimed to be automatic and transparent.
+It enables participating devices to orchestrate and react in co-ordination in order to reduce costs and be more efficient.
+It optimiseS energy use within the energy managers system between all devices including energy consumption, generation, and storage devices.
+The front end application additionally provides immediate insight and awareness at the extreme edges of the network for energy managers.
 
 - **Adaptive Energy Trading**
 this app provides energy managers and communities with a local 'market' for energy trading that is dynamic and self adjusting.
-it incorporates feeds from macro energy markets (wholesale) but also incorporates existing and changing local market conditions (i.e. new rooftop solar systems, batteries, consumption devices etc).
-the combination provides a dynamic 'exchange' for buyers and sellers of energy resources.
-just like a 'network router' dynamically adjusts and optimises according to new and changed devices, or networks being connected or disconnected, the Adaptive Energy Trading service does the same.
-The system provides these services in an automated fashion by automatically determining and finding the best price match for the local participants.
+it incorporates feeds from relevant 'top level' energy markets but also incorporates changing local market conditions (i.e. if a new rooftop solar systems, batteries, or consumption device is added to the IoE community the AET will incorporate it).
+Through this adaptive view the Application creates a dynamic 'exchange' and 'price' for buyers and sellers of energy resources to trade on for that community.
+It is similar in a way to an 'network router' in that it dynamically adjusts and optimises according to new and changing actors in the system.
+Like a 'network router' it provides these services in a transparent and automated fashion.  It will trade, orchestrate and procure energy on your behalf automatically according to the rules and policies you set (i.e. procure at lowest price, procure only clean energy sources..).
 
 - **Donation Token**
-this app provides a 'cross' geography capability for the trading of energy value.  It provides the 'escrow' and relevant service framework so that energy 'value' can be donated from one agent->provider->provider->agent.
+this app provides a 'cross' geography capability for the trading of energy value.  It provides the 'escrow/reserve' account and relevant service framework so that energy 'value' can be donated from agent->provider->provider->agent across geographical boundaries.
 this service is something we have used and demonstrated for example between two utilities in Germany and Bangladesh where it was used to enable a customer of the German Utility to donate 'surplus' solar value they create to a specific 'recipient' in Bangladesh.
 
-These are a few examples of IoE Applications that we are building but we hope and aim to provide the open source tools so that anyone around the world can create and invent their own.
+These are just a few examples of IoE Applications that we are building but we hope and aim to provide the open source tools so that anyone around the world can create and invent their own.

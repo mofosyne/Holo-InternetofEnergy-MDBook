@@ -1,8 +1,7 @@
 # Summary
 
 - [What is the Internet of Energy](./whatisioe.md)
-  - [Overview](./overview.md)
-  - [Understanding HoloChain](./holochain.md)
+  - [HoloChain](./holochain.md)
   - [Contributing](./contributing.md)
   - [Licensing](./licensing.md)
   - [Getting Started](./gettingstarted.md)
@@ -21,7 +20,6 @@
     - [Conceptual](./communityrelationships_concept.md)
     - [Configuration](./communityrelationships_config.md)
 - [IoE Application Design](./appdesign.md)
-- [Sample Application](./sampleapps.md)
 - [Let's build a smart plug](./buildaplug.md)
   - [What will I need](./whatsneeded.md)
   - [Setup](./settingup.md)
