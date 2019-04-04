@@ -1,6 +1,6 @@
 # Summary 
 - [What is the Internet of Energy](./whatisioe.md)
-	- [HoloChain](./holochain.md)
+	- [Holochain](./holochain.md)
 	- [Contributing](./contributing.md)
 	- [Licensing](./licensing.md)
 	- [Getting Started](./gettingstarted.md)
