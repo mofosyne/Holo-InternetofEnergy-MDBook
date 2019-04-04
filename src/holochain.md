@@ -25,9 +25,8 @@ Rust is a great language for IoT and is great for producing secure and robust co
 All these features are uniquely filled by Holochain and Holo and they are critical features that the Energy system needs but current distributed technology architectures cannot provide.
 
 # Understanding HoloChain
-https://holochain.org/
 
-Holochain applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
+[Holochain](https://holochain.org/) applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
 
 Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!
 
@@ -43,14 +42,15 @@ The Rust programming language helps you write faster, more reliable software. Hi
 
 Although not essential developers looking to build on the IoE Protocol should consider familiarising with Rust through the following resources:
 
-https://doc.rust-lang.org/book/ch00-00-introduction.html
-https://rust-embedded.github.io/book/intro/index.html
+[https://doc.rust-lang.org/book/ch00-00-introduction.html](https://doc.rust-lang.org/book/ch00-00-introduction.html)
+
+[https://rust-embedded.github.io/book/intro/index.html](https://rust-embedded.github.io/book/intro/index.html)
 
 ### Holochain Developer Kits
 The IoE is built upon Holochain concepts and patterns.
 Holochain presents an entirely new and unique model for designing and building applications so we recommend that any developer wishing to build an IoE solution at least briefly familiarize themselves with the Holochain guide:
 
-https://developer.holochain.org/
+[https://developer.holochain.org/](https://developer.holochain.org/)
 
 
 ### Other Platforms
