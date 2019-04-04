@@ -24,10 +24,10 @@ Rust is a great language for IoT and is great for producing secure and robust co
 
 All these features are uniquely filled by Holochain and Holo and they are critical features that the Energy system needs but current distributed technology architectures cannot provide.
 
-# Understanding HoloChain
+# Understanding Holochain
 https://holochain.org/
 
-Holochain applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
+Holochain applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
 
 Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!
 
