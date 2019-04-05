@@ -11,7 +11,7 @@ It also requires an extremely light weight software that is robust and can be em
 
 Blockchain and centralised solutions cannot and will not address this need.
 
-The agent based model differs from other architectures as it allows devices to;
+The agent based model differs from other architectures as it allows devices to
 - tailor their behaviour/reactions to their specific circumstances
 - choose to share or not share private data about their circumstances
 - create and apply a unique 'agent' perspective on the community and situation.
@@ -24,11 +24,9 @@ Rust is a great language for IoT and is great for producing secure and robust co
 
 All these features are uniquely filled by Holochain and Holo and they are critical features that the Energy system needs but current distributed technology architectures cannot provide.
 
-# Understanding HoloChain
+# Understanding Holochain
 
-[Holochain](https://holochain.org/) applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
-
-Holochain applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
+[Holochain](https://holochain.org/) applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
 
 Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!
 
@@ -56,7 +54,7 @@ Holochain presents an entirely new and unique model for designing and building a
 
 
 ### Other Platforms
-The Holochain system is writen in Rust but runs on Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.
+The Holochain system is written in Rust compiled to Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.
 
 We envisage the same for the IoE and hope that Developer Kits will be created for all popular IoT languages.
 If you are interested in developing a IoE HDK for a particular language in the future get in touch with us at www.redgrid.io/

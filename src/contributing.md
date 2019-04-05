@@ -1,6 +1,6 @@
 # Contributing
 
-all codebase for the IoE including this MDBook can be found on the 'Internet of Energy' Github repository found at:
+All codebase for the IoE including this MDBook can be found on the 'Internet of Energy' Github repository found at:
 
 <TBA>
 

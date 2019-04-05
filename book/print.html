@@ -1,158 +1,104 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en">
     <head>
-        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Internet of Energy Book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <base href="">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="book.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
-        <!-- Highlight.js Stylesheets -->
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
-        <!-- Custom theme stylesheets -->
+        <!-- Custom theme -->
         
 
         
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
     </head>
     <body class="light">
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = "light";
-        </script>
-
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
-            try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="whatisioe.html"><strong aria-hidden="true">1.</strong> What is the Internet of Energy</a></li><li><ol class="section"><li><a href="holochain.html"><strong aria-hidden="true">1.1.</strong> HoloChain</a></li><li><a href="contributing.html"><strong aria-hidden="true">1.2.</strong> Contributing</a></li><li><a href="licensing.html"><strong aria-hidden="true">1.3.</strong> Licensing</a></li><li><a href="gettingstarted.html"><strong aria-hidden="true">1.4.</strong> Getting Started</a></li></ol></li><li><a href="planning.html"><strong aria-hidden="true">2.</strong> Planning to Build and IoE</a></li><li><a href="ioe_arch.html"><strong aria-hidden="true">3.</strong> The IoE Architecture</a></li><li><ol class="section"><li><a href="identity.html"><strong aria-hidden="true">3.1.</strong> Identity and Discovery</a></li><li><ol class="section"><li><a href="identity_concept.html"><strong aria-hidden="true">3.1.1.</strong> Conceptual</a></li><li><a href="identity_config.html"><strong aria-hidden="true">3.1.2.</strong> Configuration</a></li></ol></li><li><a href="device_drivers.html"><strong aria-hidden="true">3.2.</strong> Basic Energy Device Drivers</a></li><li><ol class="section"><li><a href="device_drivers_concept.html"><strong aria-hidden="true">3.2.1.</strong> Conceptual</a></li><li><a href="device_drivers_config.html"><strong aria-hidden="true">3.2.2.</strong> Configuration</a></li></ol></li><li><a href="grammarandcurrency.html"><strong aria-hidden="true">3.3.</strong> Grammar and Currency</a></li><li><ol class="section"><li><a href="grammarandcurrency_concept.html"><strong aria-hidden="true">3.3.1.</strong> Conceptual</a></li><li><a href="grammarandcurrency_config.html"><strong aria-hidden="true">3.3.2.</strong> Configuration</a></li></ol></li><li><a href="communityrelationships.html"><strong aria-hidden="true">3.4.</strong> Community and Relationships</a></li><li><ol class="section"><li><a href="communityrelationships_concept.html"><strong aria-hidden="true">3.4.1.</strong> Conceptual</a></li><li><a href="communityrelationships_config.html"><strong aria-hidden="true">3.4.2.</strong> Configuration</a></li></ol></li></ol></li><li><a href="appdesign.html"><strong aria-hidden="true">4.</strong> IoE Application Design</a></li><li><a href="buildaplug.html"><strong aria-hidden="true">5.</strong> Let's build a smart plug</a></li><li><ol class="section"><li><a href="whatsneeded.html"><strong aria-hidden="true">5.1.</strong> What will I need</a></li><li><a href="settingup.html"><strong aria-hidden="true">5.2.</strong> Setup</a></li><li><a href="plugcontrols.html"><strong aria-hidden="true">5.3.</strong> Plug controls</a></li><li><a href="ioeid.html"><strong aria-hidden="true">5.4.</strong> Setup IoE Identity</a></li><li><a href="ioediscovery.html"><strong aria-hidden="true">5.5.</strong> Setup for Discovery</a></li><li><a href="ioedevdrivers.html"><strong aria-hidden="true">5.6.</strong> Setup Device Drivers</a></li><li><a href="ioecurrency.html"><strong aria-hidden="true">5.7.</strong> Setup Currency and Grammar</a></li><li><a href="ioeneighbors.html"><strong aria-hidden="true">5.8.</strong> Find Neighbors and Communities</a></li><li><a href="ioefrontend.html"><strong aria-hidden="true">5.9.</strong> Build a Front End to control your device</a></li></ol></li></ol>
-        </nav>
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./whatisioe.html"><strong>1.</strong> What is the Internet of Energy</a></li><li><ul class="section"><li><a href="./holochain.html"><strong>1.1.</strong> Holochain</a></li><li><a href="./contributing.html"><strong>1.2.</strong> Contributing</a></li><li><a href="./licensing.html"><strong>1.3.</strong> Licensing</a></li><li><a href="./gettingstarted.html"><strong>1.4.</strong> Getting Started</a></li></ul></li><li><a href="./planning.html"><strong>2.</strong> Planning to Build on the IoE</a></li><li><a href="./ioe_arch.html"><strong>3.</strong> The IoE Architecture</a></li><li><ul class="section"><li><a href="./identity.html"><strong>3.1.</strong> Identity and Discovery</a></li><li><a href="./identity_concept.html"><strong>3.2.</strong> Conceptual</a></li><li><a href="./identity_config.html"><strong>3.3.</strong> Configuration</a></li><li><a href="./device_drivers.html"><strong>3.4.</strong> Basic Energy Device Drivers</a></li><li><ul class="section"><li><a href="./device_drivers_concept.html"><strong>3.4.1.</strong> Conceptual</a></li><li><a href="./device_drivers_config.html"><strong>3.4.2.</strong> Configuration</a></li></ul></li><li><a href="./grammarandcurrency.html"><strong>3.5.</strong> Grammar and Currency</a></li><li><ul class="section"><li><a href="./grammarandcurrency_concept.html"><strong>3.5.1.</strong> Conceptual</a></li><li><a href="./grammarandcurrency_config.html"><strong>3.5.2.</strong> Configuration</a></li></ul></li><li><a href="./communityrelationships.html"><strong>3.6.</strong> Community and Relationships</a></li><li><ul class="section"><li><a href="./communityrelationships_concept.html"><strong>3.6.1.</strong> Conceptual</a></li><li><a href="./communityrelationships_config.html"><strong>3.6.2.</strong> Configuration</a></li></ul></li></ul></li><li><a href="./appdesign.html"><strong>4.</strong> IoE Application Design</a></li><li><a href="./buildaplug.html"><strong>5.</strong> Let's build a smart plug</a></li><li><ul class="section"><li><a href="./whatsneeded.html"><strong>5.1.</strong> What will I need</a></li><li><a href="./settingup.html"><strong>5.2.</strong> Setup</a></li><li><a href="./plugcontrols.html"><strong>5.3.</strong> Plug controls</a></li><li><a href="./ioeid.html"><strong>5.4.</strong> Setup IoE Identity</a></li><li><a href="./ioediscovery.html"><strong>5.5.</strong> Setup for Discovery</a></li><li><a href="./ioedevdrivers.html"><strong>5.6.</strong> Setup Device Drivers</a></li><li><a href="./ioecurrency.html"><strong>5.7.</strong> Setup Currency and Grammar</a></li><li><a href="./ioeneighbors.html"><strong>5.8.</strong> Find Neighbors and Communities</a></li><li><a href="./ioefrontend.html"><strong>5.9.</strong> Build a Front End to control your device</a></li></ul></li></ul>
+        </div>
 
         <div id="page-wrapper" class="page-wrapper">
 
-            <div class="page">
+            <div class="page" tabindex="-1">
                 
                 <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars" title="Toggle sidebar"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush" title="Change theme"></i>
+                    </div>
 
-                        <h1 class="menu-title">Internet of Energy Book</h1> 
+                    <h1 class="menu-title">Internet of Energy Book</h1>
 
-                        <div class="right-buttons">
-                            <a href="print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
                     </div>
                 </div>
-
-                
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
-                
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
 
                 <div id="content" class="content">
-                    <main>
-                        <a class="header" href="#welcome-to-the-internet-of-energy" id="welcome-to-the-internet-of-energy"><h1>Welcome to the Internet of Energy</h1></a>
-<a class="header" href="#introduction" id="introduction"><h2>Introduction</h2></a>
+                    <a class="header" href="print.html#welcome-to-the-internet-of-energy" id="welcome-to-the-internet-of-energy"><h1>Welcome to the Internet of Energy</h1></a>
+<a class="header" href="print.html#introduction" id="introduction"><h2>Introduction</h2></a>
 <p>Welcome to the Internet of Energy (IoE) Book.  This book aims to give you an understanding of what the IoE is, how it works, what it comprises of, and where you can apply it to your business or device.
 It also gives you the tools and knowledge to begin designing, integrating, and building solutions on it.</p>
-<a class="header" href="#a-quick-note-about-energy-transformation" id="a-quick-note-about-energy-transformation"><h2>A quick note about Energy transformation</h2></a>
+<a class="header" href="print.html#a-quick-note-about-energy-transformation" id="a-quick-note-about-energy-transformation"><h2>A quick note about Energy transformation</h2></a>
 <p>Energy systems in every country in the world are undergoing massive transformation.
 The grids we rely on and the power that flows through them historically and typically has flowed one way with you and I as consumers of energy, being fed by large centralized power generation plants.
 This architecture however is under attack.
 Rooftop solar systems, home battery storage, Electric Vehicles, and Intelligent 'IoT' devices are flooding onto the system.
 These services are democratising the grid and with IoT becoming pervasive we now have the ability to create an eco-system where any energy consuming, storing, monitoring, or generating device or system can connect, co-ordinate, orchestrate, and/or transact energy value.
 It is still early days in this transformation and our grid providers are struggling to keep up, but it is happening rapidly and the industry as a whole is trying to 'upgrade the airplane mid flight' from a top-down, one way energy feeder systems, into a full-mesh networks.</p>
-<a class="header" href="#the-internet-of-energy" id="the-internet-of-energy"><h2>The Internet of Energy</h2></a>
-<p>The internet of energy is using technology is about preparing for that outcome by leveraging device intelligence at the top, middle and extreme edges of the energy system.</p>
+<a class="header" href="print.html#the-internet-of-energy" id="the-internet-of-energy"><h2>The Internet of Energy</h2></a>
+<p>The internet of energy is using technology preparing for that outcome by leveraging device intelligence at the top, middle and extreme edges of the energy system.</p>
 <p>It is the common and open protocol and language that enables energy consuming, generating, storing, or monitoring devices to securely, privately, and with scalability communicate, disseminate and share value.</p>
 <p>We wish for the IoE to become a standard analogous to what TCP/IP protocol has become for the information internet in that it is a de-facto standard that is used across devices, brands, architectures, states, countries..</p>
 <p>For that reason the IoE is built upon some of the same principles as TCP/IP in that it is:</p>
@@ -164,13 +110,13 @@ It is still early days in this transformation and our grid providers are struggl
 <p>The TCP/IP standard has changed the way we communicate and consume information around the world and has transformed the world into one global collaborative community.
 It has opened new products, models and partnerships for businesses, individuals and communities alike that where previously unimaginable.</p>
 <p>We hope with your help that the IoE will do the same thing for Energy.</p>
-<a class="header" href="#how-exactly-can-i-use-it" id="how-exactly-can-i-use-it"><h2>How exactly can I use it?</h2></a>
+<a class="header" href="print.html#how-exactly-can-i-use-it" id="how-exactly-can-i-use-it"><h2>How exactly can I use it?</h2></a>
 <p>The IoE protocol is a set of software modules that can be embedded into any 'Energy Device'.
 That device may be a solar panel, a battery, an air-conditioner, a building-management-system, fridge, fan, smart plug, smart meter, substation infrastructure, wind farm or more.
-It is relevant for anything in the energy system that is consumes, produces, stores, or monitors power.</p>
+It is relevant for anything in the energy system that consumes, produces, stores, or monitors power.</p>
 <p>When embedded to your device it is given a secure, and private global identity for communications.
 It is also given a common language and currency that it can use to; discover, communicate and form relationships and/or trade value with others in the system (regardless of their brand, type, and even location).</p>
-<a class="header" href="#what-is-possible-when-everyone-speaks-a-common-language" id="what-is-possible-when-everyone-speaks-a-common-language"><h2>What is possible when everyone speaks a common language?</h2></a>
+<a class="header" href="print.html#what-is-possible-when-everyone-speaks-a-common-language" id="what-is-possible-when-everyone-speaks-a-common-language"><h2>What is possible when everyone speaks a common language?</h2></a>
 <p>A common language for communications alone is not enough.  What provides value for all of us is how we use that language and what we use it for.
 In the Internet of information this value is provided through Applications.  The same is true for the IoE and in the IoE we call these Smart Energy Apps.</p>
 <p>Smart Energy Apps are applications that any 'agent' in the IoE can run that allow that device to orchestrate, co-ordinate, trade value, or adjust energy usage.</p>
@@ -178,19 +124,19 @@ In the Internet of information this value is provided through Applications.  The
 <ul>
 <li>
 <p><strong>Demand Response App</strong>
-this app enables an a single or group of air conditioners to react and respond as a group to energy market conditions.
-this app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
+this app enables a group of air conditioners to react and respond as a group to energy market conditions.
+This app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
 This saves money, improves device life and benefits grid stability as devices reduce their usage (in concert) when demands on the system are too high.</p>
 </li>
 <li>
 <p><strong>Local Intelligent agent</strong>
 this app allows energy managers to build a 'personality' for the energy assets and spaces they manage.
-Using 'Private/Distributed' Machine Learning (ML) capability it uses data from energy devices (like air-conditioners) to model a space.
-An example of how this works is for an air conditioner in a room.  Through the IoE Protocol and the Local Intelligent Agent Application the air conditioner data feeds temperature, humidity, on/off information, make/model, location, timing information (..more) into a Machine Learning model that enables system managers to get a view of; the usage routine of the device, the set points relevant for the device, the rate at which the space heats or cools, the conditions of that location, estimates around asset life, how that space performs compared to other similar spaces and more.</p>
+Using 'Private/Distributed' Machine Learning (ML) capability it uses data from energy devices (like air conditioners) to model a space.
+An example of how this works is for an air conditioner in a room.  Through the IoE Protocol and the Local Intelligent Agent Application the air conditioner data feeds temperature, humidity, on/off information, make/model, location, and timing information into a Machine Learning model that enables system managers to get a view of the usage routine of the device, the set points relevant for the device, the rate at which the space heats or cools, the conditions of that location, estimates around asset life, how that space performs compared to other similar spaces and more.</p>
 </li>
 <li>
 <p><strong>Community and Macro Intelligence</strong>
-this app builds upon the Local Intelligent Agent app above allowing 'agents' to share their own data into a private homomorphically encrypted global ML model that will learn and share global level macro energy trend data.
+this app builds upon the Local Intelligent Agent app allowing 'agents' to share their own data into a private homomorphically encrypted global ML model that will learn and share global level macro energy trend data.
 This creates a global energy view of trends and changes that is relevant for energy  communities, regions, states, countries, regulators, operators, businesses and individuals.
 It provides a global macro view of insights without individual participants disclosing or risking their privacy.</p>
 </li>
@@ -204,19 +150,19 @@ The front end application additionally provides immediate insight and awareness 
 <li>
 <p><strong>Adaptive Energy Trading</strong>
 this app provides energy managers and communities with a local 'market' for energy trading that is dynamic and self adjusting.
-it incorporates feeds from relevant 'top level' energy markets but also incorporates changing local market conditions (i.e. if a new rooftop solar systems, batteries, or consumption device is added to the IoE community the AET will incorporate it).
+It incorporates feeds from relevant 'top level' energy markets but also incorporates changing local market conditions (i.e. if a new rooftop solar systems, batteries, or consumption device is added to the IoE community the AET will incorporate it).
 Through this adaptive view the Application creates a dynamic 'exchange' and 'price' for buyers and sellers of energy resources to trade on for that community.
 It is similar in a way to an 'network router' in that it dynamically adjusts and optimises according to new and changing actors in the system.
-Like a 'network router' it provides these services in a transparent and automated fashion.  It will trade, orchestrate and procure energy on your behalf automatically according to the rules and policies you set (i.e. procure at lowest price, procure only clean energy sources..).</p>
+Like a network router it provides these services in a transparent and automated fashion.  It will trade, orchestrate and procure energy on your behalf automatically according to the rules and policies you set (e.g. procure at lowest price, procure only clean energy sources..).</p>
 </li>
 <li>
 <p><strong>Donation Token</strong>
 this app provides a 'cross' geography capability for the trading of energy value.  It provides the 'escrow/reserve' account and relevant service framework so that energy 'value' can be donated from agent-&gt;provider-&gt;provider-&gt;agent across geographical boundaries.
-this service is something we have used and demonstrated for example between two utilities in Germany and Bangladesh where it was used to enable a customer of the German Utility to donate 'surplus' solar value they create to a specific 'recipient' in Bangladesh.</p>
+This service is something we have used and demonstrated for example between two utilities in Germany and Bangladesh where it was used to enable a customer of the German Utility to donate 'surplus' solar value they create to a specific 'recipient' in Bangladesh.</p>
 </li>
 </ul>
 <p>These are just a few examples of IoE Applications that we are building but we hope and aim to provide the open source tools so that anyone around the world can create and invent their own.</p>
-<a class="header" href="#the-ioe-is-built-on-holochain" id="the-ioe-is-built-on-holochain"><h1>The IoE is built on Holochain</h1></a>
+<a class="header" href="print.html#the-ioe-is-built-on-holochain" id="the-ioe-is-built-on-holochain"><h1>The IoE is built on Holochain</h1></a>
 <p>Holochain is a pattern for truly distributed peer to peer applications and is the service that the IoE is built upon.
 Our IoE Applications are also hosted on the 'Holo' service which is a distributed hosting platform also built upon the Holochain architecture.</p>
 <p>We selected Holochain as it is; lightweight, fast, scalable, requires no consensus, or energy hungry mining and unlike other Blockchain platform in the Energy space is TRULY open source.</p>
@@ -224,7 +170,7 @@ Our IoE Applications are also hosted on the 'Holo' service which is a distribute
 <p>An intelligent energy system requires adaptability, nuance, and speed at the network edges.<br />
 It also requires an extremely light weight software that is robust and can be embedded into any device easily and without compromising security, privacy and trust.</p>
 <p>Blockchain and centralised solutions cannot and will not address this need.</p>
-<p>The agent based model differs from other architectures as it allows devices to;</p>
+<p>The agent based model differs from other architectures as it allows devices to</p>
 <ul>
 <li>tailor their behaviour/reactions to their specific circumstances</li>
 <li>choose to share or not share private data about their circumstances</li>
@@ -236,61 +182,61 @@ It also requires an extremely light weight software that is robust and can be em
 <p>The IoE in alignment with Holochain is written first in the Rust language.
 Rust is a great language for IoT and is great for producing secure and robust code.</p>
 <p>All these features are uniquely filled by Holochain and Holo and they are critical features that the Energy system needs but current distributed technology architectures cannot provide.</p>
-<a class="header" href="#understanding-holochain" id="understanding-holochain"><h1>Understanding HoloChain</h1></a>
-<p><a href="https://holochain.org/">Holochain</a> applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.</p>
+<a class="header" href="print.html#understanding-holochain" id="understanding-holochain"><h1>Understanding Holochain</h1></a>
+<p><a href="https://holochain.org/">Holochain</a> applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.</p>
 <p>Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!</p>
 <p>Every application runs its own Holochain on its own terms, with cheaper hosting overhead. Since users are hosts, as more agents use an app, more hosting power and storage becomes available. The load gets lighter!</p>
 <p>Each agent's source chain holds the app's “DNA”—the code that runs the app. Its peer validation requirements ensure secure apps. That data cannot be counterfeited, tampered with, or lost. Each app stores its data in a validating DHT creating redundancy of public data across randomized nodes. When nodes go offline, the DHT is self-healing and rebalances the data to different nodes. And if someone alters their own app code they effectively fork themselves out of the shared DHT space into an entirely different application.</p>
-<a class="header" href="#developers" id="developers"><h2>Developers</h2></a>
-<a class="header" href="#rust-language" id="rust-language"><h3>RUST Language</h3></a>
+<a class="header" href="print.html#developers" id="developers"><h2>Developers</h2></a>
+<a class="header" href="print.html#rust-language" id="rust-language"><h3>RUST Language</h3></a>
 <p>Both the IoE and Holochain are written in the Rust language and compiled to Web Assembly.
 The Rust programming language helps you write faster, more reliable software. High-level ergonomics and low-level control are often at odds in programming language design; Rust challenges that conflict. Through balancing powerful technical capacity and a great developer experience, Rust gives you the option to control low-level details (such as memory usage) without all the hassle traditionally associated with such control.</p>
 <p>Although not essential developers looking to build on the IoE Protocol should consider familiarising with Rust through the following resources:</p>
 <p><a href="https://doc.rust-lang.org/book/ch00-00-introduction.html">https://doc.rust-lang.org/book/ch00-00-introduction.html</a></p>
 <p><a href="https://rust-embedded.github.io/book/intro/index.html">https://rust-embedded.github.io/book/intro/index.html</a></p>
-<a class="header" href="#holochain-developer-kits" id="holochain-developer-kits"><h3>Holochain Developer Kits</h3></a>
+<a class="header" href="print.html#holochain-developer-kits" id="holochain-developer-kits"><h3>Holochain Developer Kits</h3></a>
 <p>The IoE is built upon Holochain concepts and patterns.
 Holochain presents an entirely new and unique model for designing and building applications so we recommend that any developer wishing to build an IoE solution at least briefly familiarize themselves with the Holochain guide:</p>
 <p><a href="https://developer.holochain.org/">https://developer.holochain.org/</a></p>
-<a class="header" href="#other-platforms" id="other-platforms"><h3>Other Platforms</h3></a>
-<p>The Holochain system is writen in Rust but runs on Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.</p>
+<a class="header" href="print.html#other-platforms" id="other-platforms"><h3>Other Platforms</h3></a>
+<p>The Holochain system is written in Rust compiled to Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.</p>
 <p>We envisage the same for the IoE and hope that Developer Kits will be created for all popular IoT languages.
 If you are interested in developing a IoE HDK for a particular language in the future get in touch with us at www.redgrid.io/</p>
-<a class="header" href="#the-ioe-structure" id="the-ioe-structure"><h3>The IoE structure</h3></a>
+<a class="header" href="print.html#the-ioe-structure" id="the-ioe-structure"><h3>The IoE structure</h3></a>
 <p>Holochain services and therefore the IoE Protocol are built on what are called 'Zome' files.  These can be considered like Modules and combine to form a 'DNA' file for the device and its applications that define its actions.</p>
 <p>The IoE is simply a group of 'Zome' files with functions and formats that when added to your device allow it to be part of the IoE community and standard.</p>
-<a class="header" href="#contributing" id="contributing"><h1>Contributing</h1></a>
-<p>all codebase for the IoE including this MDBook can be found on the 'Internet of Energy' Github repository found at:</p>
+<a class="header" href="print.html#contributing" id="contributing"><h1>Contributing</h1></a>
+<p>All codebase for the IoE including this MDBook can be found on the 'Internet of Energy' Github repository found at:</p>
 <p><TBA></p>
 <p>GitHub provides built-in version control, making it easy for anyone to contribute, propose, track and merge changes, and we encourage anyone to do so and would love your help and collaboration in creating this open platform that will transform the energy system.</p>
-<a class="header" href="#what-to-contribute" id="what-to-contribute"><h2>What to contribute</h2></a>
+<a class="header" href="print.html#what-to-contribute" id="what-to-contribute"><h2>What to contribute</h2></a>
 <p>For a current list of open documentation issues, check out the repository at:</p>
 <p><TBA></p>
 <p>For a current list of open code issues, check out the repository at:</p>
 <p><TBA></p>
-<a class="header" href="#licensing" id="licensing"><h1>Licensing</h1></a>
+<a class="header" href="print.html#licensing" id="licensing"><h1>Licensing</h1></a>
 <p>Copyright (C) 2019, Internet of Energy Foundation</p>
 <p>This program is free software: you can redistribute it and/or modify it under the terms of the license provided in the LICENSE file (GPLv3). This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
-<a class="header" href="#cryptographic-autonomy-license" id="cryptographic-autonomy-license"><h2>Cryptographic Autonomy License</h2></a>
+<a class="header" href="print.html#cryptographic-autonomy-license" id="cryptographic-autonomy-license"><h2>Cryptographic Autonomy License</h2></a>
 <p>The Holochain community are currently developing a new license that will be called the <a href="https://medium.com/h-o-l-o/why-we-need-a-new-open-source-license-c8faf8a8dadd">'Cryptographic Autonomy License'</a>.
 This model will address the unique needs of truly peer-to-peer software models that are currently not addressed by GPLv3 or other license mechanisms available.</p>
 <p>The IoE will likely leverage this structure when it becomes available.</p>
-<a class="header" href="#getting-started" id="getting-started"><h1>Getting Started</h1></a>
-<a class="header" href="#who-should-read-this-book" id="who-should-read-this-book"><h2>Who should read this book?</h2></a>
+<a class="header" href="print.html#getting-started" id="getting-started"><h1>Getting Started</h1></a>
+<a class="header" href="print.html#who-should-read-this-book" id="who-should-read-this-book"><h2>Who should read this book?</h2></a>
 <p>Business people, Developers, Tinkerers are all accommodated in this book.
 Basically it is written for any person who has an idea, concept or desire to build an application that wants to control, manage or interact with an energy consuming/producing/or storing device, or a community of them.</p>
 <p>Some development experience is an advantage but the book aims to provide a step by step guide that developers and non developers alike can follow.</p>
-<a class="header" href="#knowledge-pre-requisites" id="knowledge-pre-requisites"><h2>Knowledge pre-requisites</h2></a>
+<a class="header" href="print.html#knowledge-pre-requisites" id="knowledge-pre-requisites"><h2>Knowledge pre-requisites</h2></a>
 <p>Again some knowledge of RUST and Holochain is desirable but not essential.</p>
-<a class="header" href="#setup-pre-requisites" id="setup-pre-requisites"><h2>Setup pre-requisites</h2></a>
+<a class="header" href="print.html#setup-pre-requisites" id="setup-pre-requisites"><h2>Setup pre-requisites</h2></a>
 <p>The coding components of the book require that you have Holochain running on your system.
 Instructions for setting up are found here:</p>
 <p><a href="https://developer.holochain.org/">https://developer.holochain.org/</a></p>
-<a class="header" href="#following-this-book" id="following-this-book"><h2>Following this book</h2></a>
+<a class="header" href="print.html#following-this-book" id="following-this-book"><h2>Following this book</h2></a>
 <p>The book is structured to first provide an overview both conceptual components and technical configuration options within the IoE.
 Lower level details will be found in API documentation portals separately.</p>
 <p>The first sections aim to provide a baseline understanding to get you going, but for the more adventurous there is also a section 6 at the end which provides a way to get your hands dirty through a sample project which builds a 'smart power plug'.</p>
-<a class="header" href="#planning-to-build-and-ioe" id="planning-to-build-and-ioe"><h1>Planning to Build and IoE</h1></a>
+<a class="header" href="print.html#planning-to-build-and-ioe" id="planning-to-build-and-ioe"><h1>Planning to Build and IoE</h1></a>
 <p>There are three types of use cases that readers may be interested in here:</p>
 <ul>
 <li>
@@ -304,25 +250,25 @@ Lower level details will be found in API documentation portals separately.</p>
 </li>
 </ul>
 <p>This book provides guidance for all these scenarios.</p>
-<a class="header" href="#architecture" id="architecture"><h1>Architecture</h1></a>
+<a class="header" href="print.html#architecture" id="architecture"><h1>Architecture</h1></a>
 <p>The IoE Architecture at a high level works as follows:</p>
 <p><img src="IoE_Architecture.png" alt="IoE Architecture" /></p>
 <p>The IoE is build on three layers which are:</p>
-<a class="header" href="#your-device-and-code" id="your-device-and-code"><h2>Your Device and Code</h2></a>
+<a class="header" href="print.html#your-device-and-code" id="your-device-and-code"><h2>Your Device and Code</h2></a>
 <p>The top layer is your device, or user interface.
 This is your proprietary software that is used to control and interact with your device and will be unique to your specific device capability and blue-print.</p>
 <p>The IoE 'Device Drivers' provide an interface specification and standard API for interactions with this layer.</p>
-<a class="header" href="#the-ioe-software-and-smart-energy-apps" id="the-ioe-software-and-smart-energy-apps"><h2>The IoE software and Smart Energy Apps</h2></a>
+<a class="header" href="print.html#the-ioe-software-and-smart-energy-apps" id="the-ioe-software-and-smart-energy-apps"><h2>The IoE software and Smart Energy Apps</h2></a>
 <p>This layer is the libraries and modules that embed in your device (or interact with your device via API's) that give it an identity on the IoE and all the functionality that being part of the IoE community provides.</p>
 <p>This is written in Rust and includes the Holochain HDK.
 This layer is also where the relevant Smart Energy App code is written.</p>
 <p>This software is embedded to your device (or hosted on Holo and integrated via API) and compiled to a WASM file which is called a DNA file.</p>
-<a class="header" href="#holochain" id="holochain"><h2>Holochain</h2></a>
+<a class="header" href="print.html#holochain" id="holochain"><h2>Holochain</h2></a>
 <p>IoE users when configured are given an immutable 'local' chain which captures and manages interactions.
 In addition they are provided access to 'common spaces' which are Distributed Hash Tables (DHT's) on the Holochain service.
 DHT's are what device communities use to communicate and orchestrate.
 Every Holochain (and in turn every IoE) App creates its own DHT community and network based on the rules set in its DNA.</p>
-<a class="header" href="#internet-of-energy-components" id="internet-of-energy-components"><h1>Internet of Energy Components</h1></a>
+<a class="header" href="print.html#internet-of-energy-components" id="internet-of-energy-components"><h1>Internet of Energy Components</h1></a>
 <p>The IoE standard provides features and capabilities to create and connect all three layers above.</p>
 <p><img src="IoE_Modules.png" alt="IoE Layers" /></p>
 <p>From a functions and capabilities point of view the IoE modules are categorised and built as as follows:</p>
@@ -334,8 +280,8 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 <li>Community and Relationship Zomes</li>
 </ul>
 <p>The following sections describe each of these areas and the configuration elements for each.</p>
-<a class="header" href="#identity-and-discovery" id="identity-and-discovery"><h1>Identity and Discovery</h1></a>
-<a class="header" href="#user-stories" id="user-stories"><h2>User stories</h2></a>
+<a class="header" href="print.html#identity-and-discovery" id="identity-and-discovery"><h1>Identity and Discovery</h1></a>
+<a class="header" href="print.html#user-stories" id="user-stories"><h2>User stories</h2></a>
 <ul>
 <li>as a new device when plugged in for the first time I need to discover who's near me</li>
 <li>as a new device when plugged in for the first time I need to be able to choose and confirm who my owner is.</li>
@@ -346,7 +292,7 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 <li>as an energy system manager I need to be able to choose whether my device is public or private.</li>
 <li>as a device if I'm plugged in and no 'owner' is identified I need to be configured on the IoE with some basic default capabilities</li>
 </ul>
-<a class="header" href="#device-types" id="device-types"><h2>Device types</h2></a>
+<a class="header" href="print.html#device-types" id="device-types"><h2>Device types</h2></a>
 <ul>
 <li>user types are:
 <ul>
@@ -357,17 +303,17 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 </ul>
 </li>
 </ul>
-<a class="header" href="#conceptual" id="conceptual"><h1>Conceptual</h1></a>
-<a class="header" href="#configuration" id="configuration"><h1>Configuration</h1></a>
-<a class="header" href="#basic-energy-device-drivers" id="basic-energy-device-drivers"><h1>Basic Energy Device Drivers</h1></a>
-<a class="header" href="#user-stories-1" id="user-stories-1"><h2>User stories</h2></a>
+<a class="header" href="print.html#conceptual" id="conceptual"><h1>Conceptual</h1></a>
+<a class="header" href="print.html#configuration" id="configuration"><h1>Configuration</h1></a>
+<a class="header" href="print.html#basic-energy-device-drivers" id="basic-energy-device-drivers"><h1>Basic Energy Device Drivers</h1></a>
+<a class="header" href="print.html#user-stories-1" id="user-stories-1"><h2>User stories</h2></a>
 <ul>
 <li>as a device I monitor certain things that I can do.  I need the tools to create an api interface between the IoE and my capabilities.</li>
 <li>as a device I control certain things that I can do.  I need the tools to create an api interface between the IoE and my capabilities.</li>
 <li>as a device I need a method to ensure that my transactions are trustworthy.</li>
 <li>as a device I need an API into the IoE that that is written in my language.</li>
 </ul>
-<a class="header" href="#device-types-1" id="device-types-1"><h2>Device types</h2></a>
+<a class="header" href="print.html#device-types-1" id="device-types-1"><h2>Device types</h2></a>
 <ul>
 <li>user types are:
 <ul>
@@ -378,10 +324,10 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 </ul>
 </li>
 </ul>
-<a class="header" href="#conceptual-1" id="conceptual-1"><h1>Conceptual</h1></a>
-<a class="header" href="#configuration-1" id="configuration-1"><h1>Configuration</h1></a>
-<a class="header" href="#grammar-and-currency" id="grammar-and-currency"><h1>Grammar and Currency</h1></a>
-<a class="header" href="#user-stories-2" id="user-stories-2"><h2>User stories</h2></a>
+<a class="header" href="print.html#conceptual-1" id="conceptual-1"><h1>Conceptual</h1></a>
+<a class="header" href="print.html#configuration-1" id="configuration-1"><h1>Configuration</h1></a>
+<a class="header" href="print.html#grammar-and-currency" id="grammar-and-currency"><h1>Grammar and Currency</h1></a>
+<a class="header" href="print.html#user-stories-2" id="user-stories-2"><h2>User stories</h2></a>
 <ul>
 <li>as a device I need a mutual credit currency that enables me to trade value with others in the system</li>
 <li>I need that currency to work across device, brand, architectural, and geographical boundaries and is not dependent on retailer or provider.</li>
@@ -394,7 +340,7 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 <li>as an app developer/provider I need to be rewarded in a currency for the value I provide.</li>
 <li>as a device that generates energy I need to be able to 'cash out' or 'cash in'.</li>
 </ul>
-<a class="header" href="#currency-design-architecture" id="currency-design-architecture"><h2>currency design Architecture</h2></a>
+<a class="header" href="print.html#currency-design-architecture" id="currency-design-architecture"><h2>currency design Architecture</h2></a>
 <ul>
 <li>base currency 'mutual credit' kWh</li>
 <li>participants:
@@ -433,16 +379,16 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 </li>
 </ul>
 <p>we should try to map the design to the design of Holofuel as it is the same in many ways.</p>
-<a class="header" href="#to-do" id="to-do"><h2>to do:</h2></a>
+<a class="header" href="print.html#to-do" id="to-do"><h2>to do:</h2></a>
 <ul>
 <li>list unique characteristics of the energy flow and needs</li>
 <li>then map a currency approach (token, reputation, incentive, etc) to address each in design</li>
 <li>build it.</li>
 </ul>
-<a class="header" href="#conceptual-2" id="conceptual-2"><h1>Conceptual</h1></a>
-<a class="header" href="#configuration-2" id="configuration-2"><h1>Configuration</h1></a>
-<a class="header" href="#community-and-relationships" id="community-and-relationships"><h1>Community and Relationships</h1></a>
-<a class="header" href="#user-stories-3" id="user-stories-3"><h2>User stories</h2></a>
+<a class="header" href="print.html#conceptual-2" id="conceptual-2"><h1>Conceptual</h1></a>
+<a class="header" href="print.html#configuration-2" id="configuration-2"><h1>Configuration</h1></a>
+<a class="header" href="print.html#community-and-relationships" id="community-and-relationships"><h1>Community and Relationships</h1></a>
+<a class="header" href="print.html#user-stories-3" id="user-stories-3"><h2>User stories</h2></a>
 <ul>
 <li>as an energy system manager I need to be able to setup my devices into Communities groups</li>
 <li>as an energy system manager I need to be able to setup these groups with varying degrees of access, control and visibility.</li>
@@ -453,46 +399,49 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
 <li>as a device if there is no 'active' owner I need some default rules for detecting new devices near me and how and if engage with them.</li>
 <li>as an energy system manager I need the ability to setup 'rules' for my communities that automate how and when they setup relationships.</li>
 </ul>
-<a class="header" href="#conceptual-3" id="conceptual-3"><h1>Conceptual</h1></a>
-<a class="header" href="#configuration-3" id="configuration-3"><h1>Configuration</h1></a>
-<a class="header" href="#ioe-application-design" id="ioe-application-design"><h1>IoE Application Design</h1></a>
-<a class="header" href="#user-stories-4" id="user-stories-4"><h2>User stories</h2></a>
+<a class="header" href="print.html#conceptual-3" id="conceptual-3"><h1>Conceptual</h1></a>
+<a class="header" href="print.html#configuration-3" id="configuration-3"><h1>Configuration</h1></a>
+<a class="header" href="print.html#ioe-application-design" id="ioe-application-design"><h1>IoE Application Design</h1></a>
+<a class="header" href="print.html#user-stories-4" id="user-stories-4"><h2>User stories</h2></a>
 <ul>
 <li>freemium app</li>
 <li>subscription app</li>
 </ul>
-<a class="header" href="#lets-build-a-smart-plug" id="lets-build-a-smart-plug"><h1>Let's build a smart plug</h1></a>
-<a class="header" href="#what-will-i-need" id="what-will-i-need"><h1>What will I need</h1></a>
-<a class="header" href="#setup" id="setup"><h1>Setup</h1></a>
-<a class="header" href="#plug-controls" id="plug-controls"><h1>Plug controls</h1></a>
-<a class="header" href="#setup-ioe-identity" id="setup-ioe-identity"><h1>Setup IoE Identity</h1></a>
-<a class="header" href="#setup-for-discovery" id="setup-for-discovery"><h1>Setup for Discovery</h1></a>
-<a class="header" href="#setup-device-drivers" id="setup-device-drivers"><h1>Setup Device Drivers</h1></a>
-<a class="header" href="#setup-currency-and-grammar" id="setup-currency-and-grammar"><h1>Setup Currency and Grammar</h1></a>
-<a class="header" href="#find-neighbors-and-communities" id="find-neighbors-and-communities"><h1>Find Neighbors and Communities</h1></a>
-<a class="header" href="#build-a-front-end-to-control-your-device" id="build-a-front-end-to-control-your-device"><h1>Build a Front End to control your device</h1></a>
+<a class="header" href="print.html#lets-build-a-smart-plug" id="lets-build-a-smart-plug"><h1>Let's build a smart plug</h1></a>
+<a class="header" href="print.html#what-will-i-need" id="what-will-i-need"><h1>What will I need</h1></a>
+<a class="header" href="print.html#setup" id="setup"><h1>Setup</h1></a>
+<a class="header" href="print.html#plug-controls" id="plug-controls"><h1>Plug controls</h1></a>
+<a class="header" href="print.html#setup-ioe-identity" id="setup-ioe-identity"><h1>Setup IoE Identity</h1></a>
+<a class="header" href="print.html#setup-for-discovery" id="setup-for-discovery"><h1>Setup for Discovery</h1></a>
+<a class="header" href="print.html#setup-device-drivers" id="setup-device-drivers"><h1>Setup Device Drivers</h1></a>
+<a class="header" href="print.html#setup-currency-and-grammar" id="setup-currency-and-grammar"><h1>Setup Currency and Grammar</h1></a>
+<a class="header" href="print.html#find-neighbors-and-communities" id="find-neighbors-and-communities"><h1>Find Neighbors and Communities</h1></a>
+<a class="header" href="print.html#build-a-front-end-to-control-your-device" id="build-a-front-end-to-control-your-device"><h1>Build a Front End to control your device</h1></a>
 
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                        
-
-                        
-
-                        <div style="clear: both"></div>
-                    </nav>
                 </div>
+
+                <!-- Mobile navigation buttons -->
+                
+
+                
+
             </div>
 
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
+            
 
-                
-            </nav>
+            
 
         </div>
 
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
         
 
         
@@ -500,26 +449,17 @@ Every Holochain (and in turn every IoE) App creates its own DHT community and ne
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
-
-        <!-- Custom JS scripts -->
-        
-
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
+        <script>
+            $(document).ready(function() {
+                window.print();
+            })
         </script>
         
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS script -->
         
 
     </body>
