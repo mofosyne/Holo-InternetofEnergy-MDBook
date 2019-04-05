@@ -13,7 +13,7 @@ Again some knowledge of RUST and Holochain is desirable but not essential.
 The coding components of the book require that you have Holochain running on your system.
 Instructions for setting up are found here:
 
-https://developer.holochain.org/
+[https://developer.holochain.org/](https://developer.holochain.org/)
 
 ## Following this book
 The book is structured to first provide an overview both conceptual components and technical configuration options within the IoE.
