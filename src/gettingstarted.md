@@ -16,7 +16,7 @@ Instructions for setting up are found here:
 [https://developer.holochain.org/](https://developer.holochain.org/)
 
 ## Following this book
-The book is structured to first provide an overview both conceptual components and technical configuration options within the IoE.
+The book is structured to first provide an overview of both conceptual components and technical configuration options within the IoE.
 Lower level details will be found in API documentation portals separately.
 
-The first sections aim to provide a baseline understanding to get you going, but for the more adventurous there is also a section 6 at the end which provides a way to get your hands dirty through a sample project which builds a 'smart power plug'.
+The first sections aim to provide a baseline understanding to get you going, but for the more adventurous there is also a section 6 at the end which provides a way to get your hands dirty through a sample project which builds a 'smart power plug' and IoE Application.

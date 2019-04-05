@@ -1,4 +1,4 @@
-# Summary 
+# Summary
 - [What is the Internet of Energy](./whatisioe.md)
 	- [Holochain](./holochain.md)
 	- [Contributing](./contributing.md)
@@ -7,8 +7,8 @@
 - [Planning to Build on the IoE](./planning.md)
 - [The IoE Architecture](./ioe_arch.md)
 	- [Identity and Discovery](./identity.md)
-	- [Conceptual](./identity_concept.md)
-	- [Configuration](./identity_config.md)
+		- [Conceptual](./identity_concept.md)
+		- [Configuration](./identity_config.md)
 	- [Basic Energy Device Drivers](./device_drivers.md)
 		- [Conceptual](./device_drivers_concept.md)
 		- [Configuration](./device_drivers_config.md)  

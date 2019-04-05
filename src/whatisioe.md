@@ -7,19 +7,19 @@ It also gives you the tools and knowledge to begin designing, integrating, and b
 Energy systems in every country in the world are undergoing massive transformation.
 The grids we rely on and the power that flows through them historically and typically has flowed one way with you and I as consumers of energy, being fed by large centralized power generation plants.
 This architecture however is under attack.
-Rooftop solar systems, home battery storage, Electric Vehicles, and Intelligent 'IoT' devices are flooding onto the system.
+Rooftop solar, home battery storage, Electric Vehicles, and Intelligent 'IoT' devices are flooding onto the system.
 These services are democratising the grid and with IoT becoming pervasive we now have the ability to create an eco-system where any energy consuming, storing, monitoring, or generating device or system can connect, co-ordinate, orchestrate, and/or transact energy value.
-It is still early days in this transformation and our grid providers are struggling to keep up, but it is happening rapidly and the industry as a whole is trying to 'upgrade the airplane mid flight' from a top-down, one way energy feeder systems, into a full-mesh networks.
+It is still early days in this transformation and our grid providers are struggling to keep up, but it is happening rapidly and the industry as a whole is trying to 'upgrade the airplane mid flight' from a top-down, one way energy feeder systems, into a full-mesh network.
 
 ## The Internet of Energy
-The internet of energy is using technology is about preparing for that outcome by leveraging device intelligence at the top, middle and extreme edges of the energy system.
+The internet of energy is using technology to prepare for that outcome by leveraging device intelligence at the top, middle and extreme edges to create an intelligent energy system.
 
-It is the common and open protocol and language that enables energy consuming, generating, storing, or monitoring devices to securely, privately, and with scalability communicate, disseminate and share value.
+A common and open protocol and language that enables any energy consuming, generating, storing, or monitoring devices to securely, privately, communicate, disseminate and share value in a way that will scale beyond any other alternative offering or architecture.
 
-We wish for the IoE to become a standard analogous to what TCP/IP protocol has become for the information internet in that it is a de-facto standard that is used across devices, brands, architectures, states, countries..
+The IoE aims to become a standard analogous to the TCP/IP protocol for the information internet in that it is a de-facto protocol that is used across devices, brands, architectures, states, countries..
 
-For that reason the IoE is built upon some of the same principles as TCP/IP in that it is:
-- Open source and free to use for anyone to adopt and use (not proprietary and closed).
+The only way that a solution can achieve that is if it is built upon some of the same principles including the requirements that it is:
+- Open source and free to use for anyone to adopt and use (not proprietary and closed like ALL other solutions in the market).
 - It is simple and elegant and provides a common 'language' that works across any device type, brand, manufacturer, businesses, and geography.
 - Is scalable, lightweight, modular, and community driven.
 
@@ -33,18 +33,21 @@ The IoE protocol is a set of software modules that can be embedded into any 'Ene
 That device may be a solar panel, a battery, an air-conditioner, a building-management-system, fridge, fan, smart plug, smart meter, substation infrastructure, wind farm or more.
 It is relevant for anything in the energy system that is consumes, produces, stores, or monitors power.
 
-When embedded to your device it is given a secure, and private global identity for communications.
-It is also given a common language and currency that it can use to; discover, communicate and form relationships and/or trade value with others in the system (regardless of their brand, type, and even location).
+With the software embedded into your device your device can now securely communicate with any other device in the ecosystem regardless of the brand, type, or location.
+Your device can now speak a common language and trade a common currency.  It can; discover, communicate, form relationships and/or trade value with others in the system.
+
+It also provides you with the tools to build 'Applications' that take advantage of these new capabilities.
+
 
 ## What is possible when everyone speaks a common language?
-A common language for communications alone is not enough.  What provides value for all of us is how we use that language and what we use it for.
+A common language for communications alone is not enough.  What provides value for all of us is how we use that language and what we communicate through it.
 In the Internet of information this value is provided through Applications.  The same is true for the IoE and in the IoE we call these Smart Energy Apps.
 
 Smart Energy Apps are applications that any 'agent' in the IoE can run that allow that device to orchestrate, co-ordinate, trade value, or adjust energy usage.
 
 Anyone can use the IoE software to develop 'Smart Energy Apps' that are relevant to their needs but here are some examples that RedGrid have created to give you a feel for what is possible:
 
-- **Demand Response App**
+- **Demand Management App**
 this app enables an a single or group of air conditioners to react and respond as a group to energy market conditions.
 this app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
 This saves money, improves device life and benefits grid stability as devices reduce their usage (in concert) when demands on the system are too high.
