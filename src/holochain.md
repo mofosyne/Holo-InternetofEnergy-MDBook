@@ -28,6 +28,8 @@ All these features are uniquely filled by Holochain and Holo and they are critic
 
 [Holochain](https://holochain.org/) applications (H'Apps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
 
+Holochain applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
+
 Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!
 
 Every application runs its own Holochain on its own terms, with cheaper hosting overhead. Since users are hosts, as more agents use an app, more hosting power and storage becomes available. The load gets lighter!
