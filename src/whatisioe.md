@@ -12,11 +12,7 @@ These services are democratising the grid and with IoT becoming pervasive we now
 It is still early days in this transformation and our grid providers are struggling to keep up, but it is happening rapidly and the industry as a whole is trying to 'upgrade the airplane mid flight' from a top-down, one way energy feeder systems, into a full-mesh network.
 
 ## The Internet of Energy
-<<<<<<< HEAD
 The internet of energy is using technology to prepare for that outcome by leveraging device intelligence at the top, middle and extreme edges to create an intelligent energy system.
-=======
-The internet of energy is using technology preparing for that outcome by leveraging device intelligence at the top, middle and extreme edges of the energy system.
->>>>>>> b1fff8aa1b264e59edc22b7dcc1fbdf8c5b1ce96
 
 A common and open protocol and language that enables any energy consuming, generating, storing, or monitoring devices to securely, privately, communicate, disseminate and share value in a way that will scale beyond any other alternative offering or architecture.
 
@@ -51,15 +47,9 @@ Smart Energy Apps are applications that any 'agent' in the IoE can run that allo
 
 Anyone can use the IoE software to develop 'Smart Energy Apps' that are relevant to their needs but here are some examples that RedGrid have created to give you a feel for what is possible:
 
-<<<<<<< HEAD
 - **Demand Management App**
 this app enables an a single or group of air conditioners to react and respond as a group to energy market conditions.
 this app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
-=======
-- **Demand Response App**
-this app enables a group of air conditioners to react and respond as a group to energy market conditions.
-This app provides a signal to devices about market conditions as well as what is happening in the community of devices and based on that information shifts or moves its energy usage.
->>>>>>> b1fff8aa1b264e59edc22b7dcc1fbdf8c5b1ce96
 This saves money, improves device life and benefits grid stability as devices reduce their usage (in concert) when demands on the system are too high.
 
 - **Local Intelligent agent**

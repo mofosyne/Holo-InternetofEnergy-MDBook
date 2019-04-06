@@ -54,11 +54,7 @@ Holochain presents an entirely new and unique model for designing and building a
 
 
 ### Other Platforms
-<<<<<<< HEAD
 The Holochain system is written in Rust but runs on Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.
-=======
-The Holochain system is written in Rust compiled to Web Assembly (WASM).  Multiple languages compile to WASM and for this reason the Holochain team anticipate that Holochain Development Kits (HDKs) will be written for various language standards.
->>>>>>> b1fff8aa1b264e59edc22b7dcc1fbdf8c5b1ce96
 
 We envisage the same for the IoE and hope that Developer Kits will be created for all popular IoT languages.
 If you are interested in developing a IoE HDK for a particular language in the future get in touch with us at www.redgrid.io/
