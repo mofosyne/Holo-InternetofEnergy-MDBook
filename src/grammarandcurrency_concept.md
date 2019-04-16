@@ -29,6 +29,7 @@ These include:
 
 ## Participants and their motivations
 
+![Participants and their motivations](participants.png)
 ### Distributors
 Distributors operate the grid.  They need to be paid for that service so there needs to be a 'tax' offered to them for each transaction that traverses their infrastructure.
 The design will also involve that substations, meters and other grid infrastructure is fitted with IoE monitoring equipment that will 'validate' kWh trading claims.
