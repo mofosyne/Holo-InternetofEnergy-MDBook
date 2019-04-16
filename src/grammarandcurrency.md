@@ -1,4 +1,14 @@
 # Grammar and Currency
+the transformation we need to unlock with the currency design is that we need to change peoples relationship with energy.
+we need to motivate and incentivize an understanding that energy is not yours... it's not something you buy, sell without consideration.
+energy is a property of the commons.
+how you I use energy in my world affects you and how you use energy in your world affects me.
+we need to introduce a system that promotes behaviour beyond just buying and selling energy.. that instead promotes behaviour with that energy that benefits everyone.
+
+for example the grid stability relies on people making deliberate decisions not to use certain assets or change the way in which they use them.
+
+Our currency design needs to make these things visible and accountable.
+
 
 ## User stories
 - as a device I need a mutual credit currency that enables me to trade value with others in the system
