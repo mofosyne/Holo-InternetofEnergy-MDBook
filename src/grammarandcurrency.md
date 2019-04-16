@@ -7,7 +7,7 @@ we need to introduce a system that promotes behaviour beyond just buying and sel
 
 for example the grid stability relies on people making deliberate decisions not to use certain assets or change the way in which they use them.
 
-Our currency design needs to make these things visible and accountable. 
+Our currency design needs to make these things visible and accountable.
 
 
 ## User stories
