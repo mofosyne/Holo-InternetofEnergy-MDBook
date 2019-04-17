@@ -83,7 +83,7 @@ The currency will be based on a mutual credit concept.
 *divisibility* - the system will use mutual credit so micro transactions are easy to achieve.
 *uniformity* - kWh (real energy usage) is the basis for the currency value but will be influenced by other factors (see above and below) as the solution flows.
 *supply* - generators will issue and create the currency into existence.  This is not a supply that we will control but it must be validated and trustworthy.  the more important measure that will need to be monitored is not the total volume of tokens in circulation but the balance between supply and demand of those.
-*acceptablity* - the actual token should be dynamically and automatically traded as much as possible within the energy systems.  It therefore should be as transparent to end users as possible.  Having said that cash out options must be prevalent and mapped to stable and 'trustworthy' oracles.
+*acceptability* - the actual token should be dynamically and automatically traded as much as possible within the energy systems.  It therefore should be as transparent to end users as possible.  Having said that cash out options must be prevalent and mapped to stable and 'trustworthy' oracles.
 
 ### The currency flows
 The following diagram describes the life of a flow from producer to consumer under the currency.
