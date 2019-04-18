@@ -2,7 +2,7 @@
 Holochain is a pattern for truly distributed peer to peer applications and is the service that the IoE is built upon.
 Our IoE Applications are also hosted on the 'Holo' service which is a distributed hosting platform also built upon the Holochain architecture.
 
-We selected Holochain as it is; lightweight, fast, scalable, requires no consensus, or energy hungry mining and unlike other Blockchain platform in the Energy space is TRULY open source.
+We selected Holochain as it is; lightweight, fast, scalable, does not require global consensus, or energy hungry mining and unlike other Blockchain platform in the Energy space is TRULY open source.
 
 Much more than that though, we selected Holochain because of its 'agent based' architecture. This feature gives significant advantages over centralised or existing blockchain distributed solutions and at a technical level is the ONLY model that we have found can address the 'distributed energy' market.
 
@@ -25,14 +25,13 @@ Rust is a great language for IoT and is great for producing secure and robust co
 All these features are uniquely filled by Holochain and Holo and they are critical features that the Energy system needs but current distributed technology architectures cannot provide.
 
 # Understanding Holochain
+Holochain is an engine that runs distributed apps. It uses an open source software library that provides a way for businesses, communities, and other groups to build and run applications which are hosted and validated by the "users" themselves. Doing so provides a superior level of agency and autonomy over heavy reliance on the so-called "cloud" and other third parties.
 
-[Holochain](https://holochain.org/) applications (hApps) are held entirely by people. No trusted third parties. No central points of failure. They enable direct architectural consent and cryptographic communication that are low risk, for less cost.
+Holochain provides a cross-platform framework for the development and execution of distributed applications. By running Holochain applications (Happs), "users" cease to merely "use". They become "user-participants" who are also responsible for hosting and validating the network's data. Applications can be developed utilizing any of the major operating systems, and run on virtually any device. As (Happs) can be very lightweight they are perfect for IoT devices.
 
-Each agent owns an immutable hash chain and stores public data as a monotonic DHT node. Think lightweight, secure decentralized computing possible on IoT and Mobile!
+The many benefits and opportunities associated with peer-to-peer dApps (e.g. offloaded server costs, elimination of single points of failure, and flexible governance structures) are made available, and often amplified through the Holochain hApp architecture, on desktops, laptops, Mobile and IoT devices.
 
-Every application runs its own Holochain on its own terms, with cheaper hosting overhead. Since users are hosts, as more agents use an app, more hosting power and storage becomes available. The load gets lighter!
-
-Each agent's source chain holds the app's “DNA”—the code that runs the app. Its peer validation requirements ensure secure apps. That data cannot be counterfeited, tampered with, or lost. Each app stores its data in a validating DHT creating redundancy of public data across randomized nodes. When nodes go offline, the DHT is self-healing and rebalances the data to different nodes. And if someone alters their own app code they effectively fork themselves out of the shared DHT space into an entirely different application.
+It is best to refer to Holochain's own reference material for [frequently asked questions](https://developer.holochain.org/guide/latest/faq.html) and the [Developers guide book](https://developer.holochain.org/guide/latest/) to take a deeper dive into the archetecture of the Holochain ecosystem  
 
 ## Developers
 
