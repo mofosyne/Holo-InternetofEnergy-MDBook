@@ -5,7 +5,7 @@ The currency that we use in our every day life lacks the intelligence to properl
 
 ## Next steps: 
 - Discuss currencies that carry data and provide traceability
-- Discuss applicaitons that can pattern match the currency data and do useful things (Orchestration, highlite bottlenecks, identify wastage, map distribution) 
+- Discuss applications that can pattern match the currency data and do useful things (Orchestration, highlite bottlenecks, identify wastage, map distribution) 
 - Discuss smart contracts that use the integrity of the curency data for proper energy production and supply chain managemnt
 - Discuss governance for the issuance of energy currency (As credit) and its convertability
 -- Setting its value to outcomes in (KwH) so that the value of energy credit goes up as efficency increases. (reward good outcomes)
