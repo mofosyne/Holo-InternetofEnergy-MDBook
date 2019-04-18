@@ -51,6 +51,8 @@ the mechanics of the IoE system are such that every device is given a Holochain 
 the service will work in such a way that the device (depending on its type and function) will not be given this 'address' out of the box (from the OEM)..  Instead the device will go through the discovery process above at which point a 'human' owner will be verified.
 once identified the 'machine' will be generated and provided with a public and private key-pair on Holochain.
 
+Libsodium will be used for key derivation for agents after they boot and are validated to have a 'human' owner.
+
 but identity in the IoE is more than just an address.  In a system where every 'machine' is an agent as it is in the IoE then every machine can have an Identity.
 To have an identity means that you have a view of 'what and how' others think about the world as well as a view of 'what and how' others think about you.
 
