@@ -1,4 +1,11 @@
-# Peer discovery
+# Identity and discovery
+this section is a critical component in the IoE eco-system.
+creation of a common standard for discovery and identity that works across different brands, devices, networks, software and architectures is a big challenge.
+
+in the IoE every device and device portfolio ultimately needs a defined 'human' owner who can transfer, control, and orchestrate according to their personal policy.
+this owner may be a manufacturer if the purchaser doesn't wish to fulfil the function but it must also be able to be the owner too.
+
+## Peer discovery
 
 this is an important component for devices that enables them to be seen and become part of the communities that interest them.
 for example when I buy and plug in a new solar panel at home I need it to;
@@ -8,7 +15,21 @@ c) and form direct P2P relationships with other devices in its neighborhood
 d) possibly have awareness to see when other new 'actors' enter the system
 for this we need a common way for 'likeminded' peers to see one another when they are nearby.
 
-there are several technologies that do this but we think we need to create maybe a new one for the IoE on Holochain.  Here's a summary of some of the options:
+here is how we intend and will build for the discovery process to work in the IoE using the example of a new 'energy' device being purchased and plugged in by the user for the first time (note this could be an air conditioner, pool pump, washing machine, solar system, battery, or even a wind farm!):
+
+![New Device Discovery Process](newdevicediscovery.png)
+
+See in the flow above that in the 'Discovery' step the device broadcasts its presence and searches for peers.  Note that this will occur on whatever 'network' that device is configured to participate through from its manufacturer.  For example this may be Zigbee, Lora, WiFi, 3G, 4G, 5G, GSM or other.
+We aim for this to be agnostic.
+When the device performs this search it may find, a 'human' (i.e. a mobile or web app user on the same network), or another device (like a smart meter or other system that will be configured to respond).
+If the device does find another 'machine' using the IoE in its network it will be able to perform a lookup that will find that devices 'human' owner address.
+That relevant human owner address will be notified and can begin the enrollment process.
+
+The benefit here is that device can use other devices as a proxy for reaching the 'human' owner, and similarly proxy relationships can be established to enable P2P relationships across networks.
+
+### Network Discovery Techniques for IoE
+
+there are several technologies that can help with this functionality.  Here's a summary of some of the options:
 
 *Hyperswarm*
 a popular peer discovery protocol is Hyperswarm.
@@ -27,6 +48,8 @@ once connected the owner will verify and add the device to his portfolio and the
 ssb-tunnels are an interesting way to enhance P2P network reach by connecting peers via proxies.. for example if A is connected to B and C is connected to B, an ssb-tunnel can be used through B to connect A and C.
 ssb-tunneling is useful to mention here as in many cases smart meters and other energy devices (rural areas ect) in IoT a device A will have an unstable IP connection.  using this tech can get around that as A can make a more stable long term connection with B which is close by and then use it as a portal.  very useful for mesh networking.
 
+this will likely be used heavily in the IoE discovery process to extend reach and create mesh networks and networks or networks.
+
 *CRUST - Connections in RUST*
 CRUST is a way to create reliable P2P connections in RUST with NAT traversal.
 CRUST is a really interesting option for us here as it not only performs a discovery but can be pre-configured with other rules to discover other devices.
@@ -38,10 +61,7 @@ CRUST is secure and reliable, it supports UDP and TCP hole-punching so discovery
 everything is encrypted.
 It has secure serialization so prevents MITM attacks.
 
-## Discovery Design
-our initial testing and development will use CRUST and prototype some ssb-tunneling capability to provide P2P low level networking and discovery for the Internet of Energy.
-
-# Identity
+## Identity
 every machine that is added or participating in the Internet of Energy needs an Identity.
 identity is a great dinner party topic.  for example what is identity?  Is it me? or does each organ/cell/atom in my body have a unique identity?
 in the world of the Internet of Energy every machine/sensor/or front end user running the code is provided with a unique identity with the caveat that each machine/sensor must have a human owner.
