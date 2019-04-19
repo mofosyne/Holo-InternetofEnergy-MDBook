@@ -31,26 +31,26 @@ The benefit here is that device can use other devices as a proxy for reaching th
 
 there are several technologies that can help with this functionality.  Here's a summary of some of the options:
 
-*Hyperswarm*
+**Hyperswarm**
 a popular peer discovery protocol is Hyperswarm.
 Hyperswarm could be a good choice as it can holepunch NAT so is more effective and has more reach than DAT P2P discovery protocols.
 It uses a Kademlia DHT to track peers and arrange connections.
 Hyperswarm provides a mechanism for discovering peers and establishing reliable connections.
 this is exactly the function we need.
 
-*DAT*
+**DAT**
 DAT is another option that is being replaced by Hyperswarm.
 for our need under a DAT solution a newly connected energy device will broadcast the DAT's it is interested in to the local network.
 that interesting list may differ for each device but concept is that on initial power up the device will be preconfigured to broadcast to an 'owner DAT' connection which will find and form a connection with any nearby owner devices.  This owner device is the energy manager or user portal.
 once connected the owner will verify and add the device to his portfolio and the solution will also push a list of other interesting DAT's that the owner has deemed relevant/necessary.
 
-*ssb-tunneling*
+**ssb-tunneling**
 ssb-tunnels are an interesting way to enhance P2P network reach by connecting peers via proxies.. for example if A is connected to B and C is connected to B, an ssb-tunnel can be used through B to connect A and C.
 ssb-tunneling is useful to mention here as in many cases smart meters and other energy devices (rural areas ect) in IoT a device A will have an unstable IP connection.  using this tech can get around that as A can make a more stable long term connection with B which is close by and then use it as a portal.  very useful for mesh networking.
 
 this will likely be used heavily in the IoE discovery process to extend reach and create mesh networks and networks or networks.
 
-*CRUST - Connections in RUST*
+**CRUST - Connections in RUST**
 CRUST is a way to create reliable P2P connections in RUST with NAT traversal.
 CRUST is a really interesting option for us here as it not only performs a discovery but can be pre-configured with other rules to discover other devices.
 for example when the device is plugged in it sends a beacon on the network to find local peers (similar to the broadcast above with DAT).
@@ -63,8 +63,14 @@ It has secure serialization so prevents MITM attacks.
 
 ## Identity
 every machine that is added or participating in the Internet of Energy needs an Identity.
-identity is a great dinner party topic.  for example what is identity?  Is it me? or does each organ/cell/atom in my body have a unique identity?
+identity is a great dinner party topic.  for example what is identity?  Is it me as an assembly of cells and parts? or does each organ/cell/atom in my body also have a unique identity?
 in the world of the Internet of Energy every machine/sensor/or front end user running the code is provided with a unique identity with the caveat that each machine/sensor must have a human owner.
+giving each machine a unique identity is critical as it gives us the ability to create direct P2P, and M2M relationships between devices so long as those relationships operate within the rules and boundaries set by a human owner.
+
+the creation of an addressable Identity for each device enrolling into the IoE is not done at the manufacturer (in most cases).  Rather it is performed only after that device has identified and established a relationship with a 'human' owner.
+Only once that is validated will the 'device' be provided through DKPI with a public and private keypair for Holochain communication.
+
+![Identity](identity.png)
 
 ## Address
 the mechanics of the IoE system are such that every device is given a Holochain address.
@@ -93,9 +99,9 @@ IoE will use DKPI to unify ownership of devices in a porfolio to a human.
 DKPI allows also the ability for the human owner to revoke and establish keys.
 we can also to a M of N signing model for ownership that allows multi signed key management of an energy portfolio.  This is critical for large enterprises.
 
-DKPI may also be useful for the IoE in the following contexts:
+DKPI is useful for the IoE in the following contexts:
 
-→create entries and have them signed and vouched for by other DPKI keyholders.
-→discover other user-controlled identity services.
-→choose to delegate public-facing identity services to a provider, store identity information in private entries on your own your own DPKI chain for selective release, or both!
-→link signed claims from third parties authenticating aspects of your identity to create a whole private or provider-managed store of records about you.
+- create entries and have them signed and vouched for by other DPKI keyholders.
+- discover other user-controlled identity services.
+- choose to delegate public-facing identity services to a provider, store identity information in private entries on your own your own DPKI chain for selective release, or both!
+- link signed claims from third parties authenticating aspects of your identity to create a whole private or provider-managed store of records about you.
