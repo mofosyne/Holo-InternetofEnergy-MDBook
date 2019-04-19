@@ -1,27 +1,32 @@
-# Conceptual
+# Objectives for an energy currency
+a currency for energy is much more than just a measure of kWh transactions or trading of tokens that represent kWh's and nothing else.
+to effect and accelerate the real transformation in the energy system toward a clean, sustainable and equitable model we require a much more focussed and targeted currency.
 
-## Objectives of the currency
-the transformation we need to unlock with the currency design is that we need to change peoples relationship with energy.
-we need to motivate and incentivize an understanding that energy is not yours... it's not something you buy, sell without consideration.
-energy is a property of the commons.
-how you I use energy in my world affects you and how you use energy in your world affects me.
-we need to introduce a system that promotes behaviour beyond just buying and selling energy.. that instead promotes behaviour with that energy that benefits everyone.
+Every currency design needs an objective.  What is it trying to achieve?
+For the IoE currency the transformation we wish to unlock aims to alter the way people relate with energy.
+we need to motivate and incentivize an understanding that energy is not yours... it's not ALWAYS something you buy, sell without consideration.
+energy is most often a property of the commons.  Perhaps in this day and age rather than being a commercial product it is a human right???
 
-for example the grid stability relies on people making deliberate decisions not to use certain assets or change the way in which they use them.
+regardless your view on the statement above the reality is that the way our grid and energy system is architected today it is true that how I use energy in my world affects you and how you use energy in your world affects me.
 
-Our currency design needs to make these things visible and accountable.
+With this in mind we need to create a currency and system that promotes behaviour beyond just buying and selling energy for personal benefit.. rather we need a system that promotes positive community behaviour.
 
-It has five main objectives:
-- enables a mechanism for energy 'value' trading that works P2P, M2M across businesses, manufacturers, device types, and geographical boundaries.
-- rewards those who use clean energy efficiently and give more than they take.
-- provides a reward/mechanism where those who give more than they take can prop up and support/subsidize those who want to invest in clean energy but cannot.
-- rewards clean energy production and discourages dirty energy.
-- rewards local trading and resilience.
+the energy grid is very dynamic and becoming moreso.  From a technical perspective it relies on demand and supply being in local balance.  This was reasonably easy in feeder based system of the past, but today with the tsunami of rooftop solar generation, batteries storage, and increasing energy consumption devices flooding to the system the need to create currency models that incentivize community minded behaviour and prefer renewables is paramount.
+
+The IoE currency design is unique in the industry as it measures these things and makes them visible.
+
+The IoE currency has five main objectives:
+- to provide a mechanism for energy 'value' trading that works P2P, M2M across businesses, manufacturers, device types, and geographical boundaries.
+- provide a currency that rewards those who use clean energy efficiently.
+- provide a currency that rewards those who give more to the right places than they take.
+- provides a system that sends the energy produced by those with more than they need to those who want/need clean energy but can't access it (helping to prop these people up so they can do the same for others).
+- rewards clean energy production/consumption and discourages dirty energy sources or consumption.
+- rewards local energy resilience (i.e. encourages and rewards a more localised/distributed energy system).
 
 ## Introduction
 
 ## Baseline Measure
-The baseline measure is kWh.  However a currency that measures and tracks kWh's is not enough to change behaviour.
+The baseline measure for energy transfer is kWh.  However a currency that measures and tracks kWh's is not enough to change behaviour.
 We need to make visible other characteristics that are important to achieve the goals above.
 These include:
 
