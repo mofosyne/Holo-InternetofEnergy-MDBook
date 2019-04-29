@@ -31,6 +31,18 @@ The benefit here is that device can use other devices as a proxy for reaching th
 
 there are several technologies that can help with this functionality.  Here's a summary of some of the options:
 
+**Holochain MDNS/Bootstrap**
+For peer discovery the Holochain service currently leverages Multicast DNS to discover peers on a local network.
+There is also a bootstrap server built into the command line tools however this is more relevant for our IoT examples.  
+
+**Bootstrap**
+currently the Holochain command line tools include the NPM Bootstrap server service.  This can be used as a mechanism for peer discovery and P2P networking.
+Doubtful that this will be the correct solution for IoT and InternetOfEnergy purposes.
+
+**LibP2P**
+currently still being configured for RUST but in my mind this is the best solution as the  networking layer for the IoE.
+this service we propose will provide find/fetch/authenticate services to IoE devices and allow them to 'enroll' and become part of the Holochain IoE services.
+
 **Hyperswarm**
 a popular peer discovery protocol is Hyperswarm.
 Hyperswarm could be a good choice as it can holepunch NAT so is more effective and has more reach than DAT P2P discovery protocols.
