@@ -3,3 +3,9 @@ authors = ["Simon Wilson", "Mike Gamble"]
 multilingual = false
 src = "src"
 title = "Internet of Energy Book"
+
+[output.html]
+[output.epub]
+[output.linkcheck]  # enable the "mdbook-linkcheck" renderer
+follow-web-links = true
+traverse-parent-directories = false
