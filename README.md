@@ -7,8 +7,26 @@ For those that want to immediatly contribute to this book, the text is located i
 ## Viewing
 
 * Current online html ebook is located at https://ioe-book.herokuapp.com/book/html/index.html
-* Current online epub ebook is located at https://ioe-book.herokuapp.com/book/epub/Internet%20of%20Energy%20Book.pdf
+* Current online epub ebook is located at https://ioe-book.herokuapp.com/book/epub/Internet%20of%20Energy%20Book.epub
 * Current online pdf ebook is located at https://ioe-book.herokuapp.com/book/pdf/Internet_of_Energy_Book.pdf
+
+## Makefile
+
+Makefile is included to make building the book easier for less technical users. You can still do all of this manually using instructions in this page.
+
+* Setting up the enviroment
+  - `make setup-win`
+  - `make setup-ubuntu`
+  - `make setup-osx`
+
+* `make` : Do all
+
+* `make clean` : Just clean
+
+* `make mdbook` : Make html and epub
+
+* `make pdf` : Make pdf
+
 
 ## Setting up
 
@@ -29,7 +47,7 @@ mdbook build
 
 # Generate PDF (Provided pandoc is installed with pdf support)
 mkdir ./book/pdf
-pandoc -V geometry:margin=1in  -o ./book/pdf/Internet_of_Energy_Book.pdf ./book/epub/*.epub
+pandoc --toc --toc-depth=2 -V geometry:margin=1in  -o ./book/pdf/Internet_of_Energy_Book.pdf ./book/epub/*.epub
 ```
 
 
